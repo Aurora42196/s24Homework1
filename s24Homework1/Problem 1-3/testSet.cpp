@@ -107,7 +107,7 @@
 //    cout << "Passed all tests" << endl;
 //}
 
-#include "newSet.h"
+#include "Set.h"
 #include <string>
 #include <iostream>
 #include <cassert>

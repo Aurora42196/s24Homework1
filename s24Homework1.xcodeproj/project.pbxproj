@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1F0FEE02BCF976500165B83 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEDF2BCF976500165B83 /* main.cpp */; };
+		C1F0FEE92BCF977C00165B83 /* testSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEE62BCF977C00165B83 /* testSet.cpp */; };
+		C1F0FEF42BCF97A200165B83 /* newSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEF22BCF97A200165B83 /* newSet.cpp */; };
+		C1F0FEF82BCF997E00165B83 /* Set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEE72BCF977C00165B83 /* Set.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,15 @@
 
 /* Begin PBXFileReference section */
 		C1F0FEDC2BCF976500165B83 /* s24Homework1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = s24Homework1; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1F0FEDF2BCF976500165B83 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C1F0FEE62BCF977C00165B83 /* testSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testSet.cpp; sourceTree = "<group>"; };
+		C1F0FEE72BCF977C00165B83 /* Set.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Set.cpp; sourceTree = "<group>"; };
+		C1F0FEE82BCF977C00165B83 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
+		C1F0FEEB2BCF979000165B83 /* PayerSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayerSet.h; sourceTree = "<group>"; };
+		C1F0FEEC2BCF979000165B83 /* PayerSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PayerSet.cpp; sourceTree = "<group>"; };
+		C1F0FEED2BCF979000165B83 /* testPayerSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testPayerSet.cpp; sourceTree = "<group>"; };
+		C1F0FEF02BCF97A200165B83 /* newSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newSet.h; sourceTree = "<group>"; };
+		C1F0FEF12BCF97A200165B83 /* testnewSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testnewSet.cpp; sourceTree = "<group>"; };
+		C1F0FEF22BCF97A200165B83 /* newSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = newSet.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +67,41 @@
 		C1F0FEDE2BCF976500165B83 /* s24Homework1 */ = {
 			isa = PBXGroup;
 			children = (
-				C1F0FEDF2BCF976500165B83 /* main.cpp */,
+				C1F0FEF52BCF994000165B83 /* Problem 1-3 */,
+				C1F0FEF62BCF994F00165B83 /* Problem 4 */,
+				C1F0FEF72BCF995900165B83 /* Problem 5 */,
 			);
 			path = s24Homework1;
+			sourceTree = "<group>";
+		};
+		C1F0FEF52BCF994000165B83 /* Problem 1-3 */ = {
+			isa = PBXGroup;
+			children = (
+				C1F0FEE62BCF977C00165B83 /* testSet.cpp */,
+				C1F0FEE72BCF977C00165B83 /* Set.cpp */,
+				C1F0FEE82BCF977C00165B83 /* Set.h */,
+			);
+			path = "Problem 1-3";
+			sourceTree = "<group>";
+		};
+		C1F0FEF62BCF994F00165B83 /* Problem 4 */ = {
+			isa = PBXGroup;
+			children = (
+				C1F0FEED2BCF979000165B83 /* testPayerSet.cpp */,
+				C1F0FEEC2BCF979000165B83 /* PayerSet.cpp */,
+				C1F0FEEB2BCF979000165B83 /* PayerSet.h */,
+			);
+			path = "Problem 4";
+			sourceTree = "<group>";
+		};
+		C1F0FEF72BCF995900165B83 /* Problem 5 */ = {
+			isa = PBXGroup;
+			children = (
+				C1F0FEF12BCF97A200165B83 /* testnewSet.cpp */,
+				C1F0FEF22BCF97A200165B83 /* newSet.cpp */,
+				C1F0FEF02BCF97A200165B83 /* newSet.h */,
+			);
+			path = "Problem 5";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F0FEE02BCF976500165B83 /* main.cpp in Sources */,
+				C1F0FEF82BCF997E00165B83 /* Set.cpp in Sources */,
+				C1F0FEF42BCF97A200165B83 /* newSet.cpp in Sources */,
+				C1F0FEE92BCF977C00165B83 /* testSet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
