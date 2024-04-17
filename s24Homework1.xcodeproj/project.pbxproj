@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1F0FEE92BCF977C00165B83 /* testSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEE62BCF977C00165B83 /* testSet.cpp */; };
-		C1F0FEF42BCF97A200165B83 /* newSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEF22BCF97A200165B83 /* newSet.cpp */; };
-		C1F0FEF82BCF997E00165B83 /* Set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEE72BCF977C00165B83 /* Set.cpp */; };
+		C13FF4172BD075F100D42379 /* newSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEF22BCF97A200165B83 /* newSet.cpp */; };
+		C13FF4182BD075F400D42379 /* testnewSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F0FEF12BCF97A200165B83 /* testnewSet.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -161,9 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F0FEF82BCF997E00165B83 /* Set.cpp in Sources */,
-				C1F0FEF42BCF97A200165B83 /* newSet.cpp in Sources */,
-				C1F0FEE92BCF977C00165B83 /* testSet.cpp in Sources */,
+				C13FF4182BD075F400D42379 /* testnewSet.cpp in Sources */,
+				C13FF4172BD075F100D42379 /* newSet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

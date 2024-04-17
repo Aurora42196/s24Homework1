@@ -159,7 +159,7 @@ void Set::swap(Set &other)
 //    cerr << "Set::swap() function called!" << endl;
 //    std::swap(m_array, other.m_array);
 //    std::swap(m_size, other.m_size);
-    
+//    
     if (m_size == other.m_size) // The dynamically allocated arrays are the same size
     {
         for (int i = 0; i < m_size; i++)
@@ -197,6 +197,13 @@ void Set::swap(Set &other)
             other.m_array[i] = m_array[i];
         }
     }
+    
+    /// Based off the solution to Homework 1, just swap the pointers of the dynamically allocated arrays
+    /// rather swapping the values in the arrays themselves!! Bro that's big brained
+//    //Swap the pointers of the dynamically allocated arrays
+//    ItemType* tempArr = m_array;
+//    m_array = other.m_array;
+//    other.m_array = tempArr;
     
     //Swap the capacities of the arrays
     int tempC = m_capacity;

@@ -107,28 +107,61 @@
 //    cout << "Passed all tests" << endl;
 //}
 
+//#include "Set.h"
+//#include <string>
+//#include <iostream>
+//#include <cassert>
+//using namespace std;
+//
+//void test()
+//{
+//    Set ss;
+//    assert(ss.insert("pita"));
+//    assert(ss.insert("roti"));
+//    assert(ss.size() == 2);
+//    assert(ss.contains("roti"));
+//    ItemType x = "laobing";
+//    assert(ss.get(0, x)  &&  x == "roti");
+//    assert(ss.get(1, x)  &&  x == "pita");
+//}
+//
+//int main()
+//{
+//    test();
+//    cout << "Passed all tests" << endl;
+//}
+
 #include "Set.h"
 #include <string>
 #include <iostream>
 #include <cassert>
-using namespace std;
 
-void test()
-{
-    Set ss;
-    assert(ss.insert("pita"));
-    assert(ss.insert("roti"));
-    assert(ss.size() == 2);
-    assert(ss.contains("roti"));
-    ItemType x = "laobing";
-    assert(ss.get(0, x)  &&  x == "roti");
-    assert(ss.get(1, x)  &&  x == "pita");
-}
 
 int main()
 {
-    test();
-    cout << "Passed all tests" << endl;
+    Set test1;
+    assert(test1.empty());
+    test1.insert("Apple");
+    test1.insert("Banana");
+    test1.insert("Apple");
+    test1.insert("");
+    assert(test1.size() == 3 && test1.contains(""));
+    std::string x;
+    test1.get(0, x);
+    assert(x == "Banana");
+    Set test2 = test1;
+    test2.erase("");
+    assert(test2.size() == 2 && !test2.contains(""));
+    test2.insert("Carrot");
+    test2.insert("Daikon");
+    test2.insert("Eggplant");
+    test2.insert("Fennel");
+    assert(test2.size() == 6);
+    test1.swap(test2);
+    test2 = test1;
+    test2.get(2, x);
+    assert(test1.size() == 6 && test2.size() == 6 && x == "Daikon");
+    std::cout << "All tests passed!" << std::endl;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

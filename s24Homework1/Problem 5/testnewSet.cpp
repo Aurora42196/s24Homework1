@@ -127,15 +127,49 @@ using namespace std;
 
     #endif
 
-    void test()
-    {
-        Set s;
-        assert(s.empty());
-        ItemType v = DUMMY_VALUE;
-        assert( !s.get(0, v)  &&  v == DUMMY_VALUE); // v unchanged by get failure
-        s.insert(V1);
-        assert(s.size() == 1);
-        assert(s.get(0, v)  &&  v == V1);
+#include "newSet.h"
+#include <string>
+#include <iostream>
+#include <cassert>
+
+
+int main()
+{
+    Set test1;
+    assert(test1.empty());
+    test1.insert("Apple");
+    test1.insert("Banana");
+    test1.insert("Apple");
+    test1.insert("");
+    assert(test1.size() == 3 && test1.contains(""));
+    std::string x;
+    test1.get(0, x);
+    assert(x == "Banana");
+    Set test2 = test1;
+    test2.erase("");
+    assert(test2.size() == 2 && !test2.contains(""));
+    test2.insert("Carrot");
+    test2.insert("Daikon");
+    test2.insert("Eggplant");
+    test2.insert("Fennel");
+    assert(test2.size() == 6);
+    test1.swap(test2);
+    test2 = test1;
+    test2.get(2, x);
+    assert(test1.size() == 6 && test2.size() == 6 && x == "Daikon");
+    std::cout << "All tests passed!" << std::endl;
+}
+
+
+//    void test()
+//    {
+//        Set s;
+//        assert(s.empty());
+//        ItemType v = DUMMY_VALUE;
+//        assert( !s.get(0, v)  &&  v == DUMMY_VALUE); // v unchanged by get failure
+//        s.insert(V1);
+//        assert(s.size() == 1);
+//        assert(s.get(0, v)  &&  v == V1);
         
         /////////////////////////////////////////////////////////
         // Test cases for a Set of strings
@@ -155,23 +189,23 @@ using namespace std;
 //        ss.erase("roti");
 //        ss.dump();
         
-        Set s2;
-        s2.insert("hello");
-        s2.insert("goodbye");
-        assert(s2.size() == 2);
-        s2.dump();
-        s2.erase("goodbye");
-        assert(!s2.contains("goodbye"));
-        s2.dump();
-        
-        Set ss1;
-        ss1.insert("tortilla");
-        Set ss2;
-        ss2.insert("matzo");
-        ss2.insert("pita");
-        ss1.swap(ss2);
-        assert(ss1.size() == 2  &&  ss1.contains("matzo")  &&  ss1.contains("pita")  &&
-               ss2.size() == 1  &&  ss2.contains("tortilla"));
+//        Set s2;
+//        s2.insert("hello");
+//        s2.insert("goodbye");
+//        assert(s2.size() == 2);
+//        s2.dump();
+//        s2.erase("goodbye");
+//        assert(!s2.contains("goodbye"));
+//        s2.dump();
+//        
+//        Set ss1;
+//        ss1.insert("tortilla");
+//        Set ss2;
+//        ss2.insert("matzo");
+//        ss2.insert("pita");
+//        ss1.swap(ss2);
+//        assert(ss1.size() == 2  &&  ss1.contains("matzo")  &&  ss1.contains("pita")  &&
+//               ss2.size() == 1  &&  ss2.contains("tortilla"));
         
 //        Set s;
 //        assert(s.empty());
@@ -182,23 +216,23 @@ using namespace std;
 //        assert(s.get(0, x)  &&  x == "chapati");
 //        cout << "Passed all tests" << endl;
         
-        Set ss;
-        ss.insert("lavash");
-        ss.insert("roti");
-        ss.insert("chapati");
-        ss.insert("injera");
-        ss.insert("roti");
-        ss.insert("matzo");
-        ss.insert("injera");
-        ss.dump();
-        assert(ss.size() == 5);  // duplicate "roti" and "injera" were not added
-        string x;
-        ss.get(0, x);
-        assert(x == "roti");  // "roti" is less than exactly 0 items in ss
-        ss.get(4, x);
-        assert(x == "chapati");  // "chapati" is less than exactly 4 items in ss
-        ss.get(2, x);
-        assert(x == "lavash");  // "lavash" is less than exactly 2 items in ss
+//        Set ss;
+//        ss.insert("lavash");
+//        ss.insert("roti");
+//        ss.insert("chapati");
+//        ss.insert("injera");
+//        ss.insert("roti");
+//        ss.insert("matzo");
+//        ss.insert("injera");
+//        ss.dump();
+//        assert(ss.size() == 5);  // duplicate "roti" and "injera" were not added
+//        string x;
+//        ss.get(0, x);
+//        assert(x == "roti");  // "roti" is less than exactly 0 items in ss
+//        ss.get(4, x);
+//        assert(x == "chapati");  // "chapati" is less than exactly 4 items in ss
+//        ss.get(2, x);
+//        assert(x == "lavash");  // "lavash" is less than exactly 2 items in ss
         
 //        Set ss3;
 //        ss3.insert("dosa");
@@ -229,13 +263,13 @@ using namespace std;
 //        cout << "Passed all tests" << endl;
 //    }
 
-    }
-
-    int main()
-    {
-        test();
-        cout << "Passed all tests" << endl;
-    }
+//    }
+//
+//    int main()
+//    {
+//        test();
+//        cout << "Passed all tests" << endl;
+//    }
 
 //void test()
 //{
